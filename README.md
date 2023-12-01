@@ -1,16 +1,20 @@
-# ivs-test
+# Amazon IVS Player
 
-To install dependencies:
+Amazon Interactive Video Service (IVS) is a managed, live-video streaming service that allows you to:
+* Create channels and start streaming in minutes.
+* Build engaging, interactive experiences alongside low-latency live video.
+* Distribute video at scale to a range of devices and platforms.
 
-```bash
-bun install
-```
+The Amazon IVS Player is a cross-platform suite of SDKs for playback of Amazon IVS streams. Note that third-party
+players do not work with Amazon IVS.
 
-To run:
+Visit [https://docs.aws.amazon.com/ivs/](https://docs.aws.amazon.com/ivs/) for documentation on how to use the player.
 
-```bash
-bun run index.ts
-```
+## Copyright and License
 
-This project was created using `bun init` in bun v1.0.2. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
-# patched-ivs
+Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+
+Provided as AWS Content and subject to the [AWS Customer Agreement](https://aws.amazon.com/agreement/) and any other
+agreement with AWS governing your use of AWS services.
+
+See [full license text](https://player.live-video.net/LICENSE.txt) for more information.
