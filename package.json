@@ -1,0 +1,14 @@
+{
+  "name": "ivs-test",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "amazon-ivs-player": "^1.23.0"
+  }
+}

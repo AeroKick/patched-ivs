@@ -1,0 +1,46 @@
+{
+  "name": "amazon-ivs-player",
+  "version": "1.23.0",
+  "description": "Amazon IVS Player Web SDK",
+  "homepage": "https://aws.amazon.com/ivs/",
+  "bugs": {
+    "url": "https://aws.amazon.com/contact-us/"
+  },
+  "license": "SEE LICENSE IN https://player.live-video.net/LICENSE.txt",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/index.js",
+    "dist/index.d.ts",
+    "dist/tsdoc-metadata.json",
+    "dist/assets/amazon-ivs-worker.min.js",
+    "dist/assets/amazon-ivs-wasmworker.min.js",
+    "dist/assets/amazon-ivs-wasmworker.min.wasm"
+  ],
+  "scripts": {
+    "prepare-release": "npm ci && bash ./scripts/clean-player-artifacts.sh && bash ./scripts/prepare-release.sh",
+    "prepare-release:ci": "npm ci && bash ./scripts/prepare-release.sh",
+    "validate-api-and-generate-rollup": "api-extractor run",
+    "validate-types": "cp dist/index.d.ts ./dist/index-temp.ts && tsc ./dist/index-temp.ts --declaration --emitDeclarationOnly --skipLibCheck && echo 'Successfully validated types'",
+    "update-types": "api-extractor run --local && bash ./scripts/strip-directives.sh && npm run validate-types",
+    "docs": "typedoc --options typedoc.json"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.9.2",
+    "bowser": "^2.10.0",
+    "promise-polyfill": "^8.1.3",
+    "typescript": "^4.8.2"
+  },
+  "peerDependencies": {
+    "bowser": "^2.10.0"
+  },
+  "devDependencies": {
+    "@microsoft/api-extractor": "^7.22.2",
+    "typedoc": "^0.24.8"
+  },
+  "author": {
+    "name": "Amazon Web Services",
+    "email": "",
+    "url": "https://aws.amazon.com/"
+  }
+}
